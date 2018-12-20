@@ -52,7 +52,7 @@ class App extends Component {
   };
 
   handleKeyPress = event => {
-    if (event.key === 'Enter' && this.state.object && !this.state.loading) {
+    if (event.key === 'Enter' && !(!this.state.object || /^\s*$/.test(this.state.object) || this.state.object.length < 13 || this.state.object.length > 13) && !this.state.loading) {
       this.handleClick();
     }
   };
@@ -86,12 +86,15 @@ class App extends Component {
             helperText="Exemplo: AA123456789BR"
             onChange={this.handleChange('object')}
             onKeyPress={this.handleKeyPress}
+            inputProps={{
+              maxLength: 13,
+            }}
           />
           <Button 
             variant="contained"
             color="primary"
             className="Button"
-            disabled={(!this.state.object || this.state.loading)}
+            disabled={((!this.state.object || /^\s*$/.test(this.state.object) || this.state.object.length < 13 || this.state.object.length > 13) || this.state.loading)}
             onClick={() => { this.handleClick() }}> 
               Rastrear
               <SendIcon className="Icon"/>
