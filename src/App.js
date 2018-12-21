@@ -73,51 +73,45 @@ class App extends Component {
           <AppBar position="static" color="primary">
             <Toolbar>
               <Typography variant="h6" color="inherit">
-                Correios Track Service
+                Correios Tracking
               </Typography>
             </Toolbar>
           </AppBar>
 
-          <TextField
-            id="track-object"
-            label="Objeto"
-            type="text"
-            margin="normal"
-            helperText="Exemplo: AA123456789BR"
-            onChange={this.handleChange('object')}
-            onKeyPress={this.handleKeyPress}
-            inputProps={{
-              maxLength: 13,
-            }}
-          />
-          <Button 
-            variant="contained"
-            color="primary"
-            className="Button"
-            disabled={((!this.state.object || /^\s*$/.test(this.state.object) || this.state.object.length < 13 || this.state.object.length > 13) || this.state.loading)}
-            onClick={() => { this.handleClick() }}> 
-              Rastrear
-              <SendIcon className="Icon"/>
-            </Button>
-
-            <br />
-            <br />
-            <br />
+          <div className="Margin">
+            <TextField
+              id="track-object"
+              label="Objeto"
+              type="text"
+              margin="normal"
+              helperText="Exemplo: AA123456789BR"
+              onChange={this.handleChange('object')}
+              onKeyPress={this.handleKeyPress}
+              inputProps={{
+                maxLength: 13,
+              }}
+            />
+            <Button 
+              variant="contained"
+              color="primary"
+              className="Button"
+              disabled={((!this.state.object || /^\s*$/.test(this.state.object) || this.state.object.length < 13 || this.state.object.length > 13) || this.state.loading)}
+              onClick={() => { this.handleClick() }}> 
+                Rastrear
+                <SendIcon className="Icon"/>
+              </Button>
+            </div>
 
             { this.state.info &&
-              <Chip color="primary" label={"Rastreamento de Objeto - " + this.state.info.objeto[0].numero} />
+              <Chip className="Margin" color="primary" label={"Rastreamento de Objeto - " + this.state.info.objeto[0].numero} />
             }
-            
-            <br />
-            <br />
-            <br />
 
             { this.state.info && !this.state.info.objeto[0].categoria.includes("ERRO") &&
                 <Table className="TableSize">
                   <TableHead>
                     <TableRow>
-                      <TableCell  component="th" scope="row"><strong>Data / Hora</strong></TableCell>
-                      <TableCell  component="th" scope="row"><strong>Status / Localidade</strong></TableCell>
+                      <TableCell className="CellPadding" component="th" scope="row"><strong>Data / Hora</strong></TableCell>
+                      <TableCell className="CellPadding" component="th" scope="row"><strong>Status / Localidade</strong></TableCell>
                     </TableRow>
                   </TableHead>
                   <TableBody>
@@ -125,11 +119,11 @@ class App extends Component {
                       this.state.info.objeto[0].evento.map(evento => {
                         return (
                           <TableRow key={evento.tipo + evento.criacao}>
-                            <TableCell className="TableColor">{evento.data + ' ' + evento.hora}</TableCell>
+                            <TableCell className="TableColor CellPadding">{evento.data + ' ' + evento.hora}</TableCell>
                               <Table>
                                 <TableBody>
                                   <TableRow className="TableColor" key={evento.tipo + evento.descricao}>
-                                    <TableCell><strong>{evento.descricao}</strong></TableCell>
+                                    <TableCell className="CellPadding"><strong>{evento.descricao}</strong></TableCell>
                                   </TableRow>
                                 </TableBody>
                               </Table>
@@ -137,17 +131,17 @@ class App extends Component {
                                 <TableBody>
                                   <TableRow key={evento.tipo+evento.destino}>
                                   { !evento.destino &&
-                                    <TableCell>
+                                    <TableCell className="CellPadding">
                                       <strong>Local:</strong> { evento.unidade.local + ' - ' + evento.unidade.cidade + '/' + evento.unidade.uf + ' - ' + evento.unidade.tipounidade }
                                     </TableCell>
                                   }
                                   { evento.destino &&
-                                    <TableCell className="Origem">
+                                    <TableCell className="Origem CellPadding">
                                       <strong>Origem:</strong> { evento.unidade.local + ' - ' + evento.unidade.cidade + '/' + evento.unidade.uf + ' - ' + evento.unidade.tipounidade}
                                     </TableCell>
                                   }
                                   { evento.destino &&
-                                    <TableCell>
+                                    <TableCell className="CellPadding">
                                       <strong>Destino:</strong> { evento.destino[0].local + ' - ' + evento.destino[0].cidade + '/' + evento.destino[0].uf }
                                     </TableCell>
                                   }

@@ -24,3 +24,11 @@
   margin-left: 3%;
   margin-right: 3%;
 }
+
+.CellPadding {
+  padding: 10px !important;
+}
+
+.Margin {
+  margin-bottom: 30px;
+}
