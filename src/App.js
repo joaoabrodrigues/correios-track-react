@@ -39,7 +39,7 @@ class App extends Component {
     super()
     let objectUrl = new URLSearchParams(window.location.search).get('object')
 
-    objectUrl = objectUrl && objectUrl.length === 13 && !/^\s*$/.test(objectUrl) ? objectUrl : null
+    objectUrl = objectUrl && objectUrl.length === 13 && /^[A-Za-z]{2}[0-9]{9}[A-Za-z]{2}/.test(objectUrl) ? objectUrl : null
 
     this.state =  {
       info: '',
@@ -64,7 +64,7 @@ class App extends Component {
   };
 
   handleKeyPress = event => {
-    if (event.key === 'Enter' && !(!this.state.object || /^\s*$/.test(this.state.object) || this.state.object.length !== 13 ) && !this.state.loading) {
+    if (event.key === 'Enter' && !(!this.state.object || !/^[A-Za-z]{2}[0-9]{9}[A-Za-z]{2}/.test(this.state.object) || this.state.object.length !== 13 ) && !this.state.loading) {
       this.handleClick();
     }
   };
@@ -96,7 +96,7 @@ class App extends Component {
               label="Objeto"
               type="text"
               margin="normal"
-              helperText="Exemplo: AA123456789BR"
+              helperText="Exemplo: AB123456789BR"
               onChange={this.handleChange('object')}
               onKeyPress={this.handleKeyPress}
               value={this.state.object}
@@ -108,7 +108,7 @@ class App extends Component {
               variant="contained"
               color="primary"
               className="Button"
-              disabled={(!this.state.object || /^\s*$/.test(this.state.object) || this.state.object.length !== 13) || this.state.loading}
+              disabled={(!this.state.object || !/^[A-Za-z]{2}[0-9]{9}[A-Za-z]{2}/.test(this.state.object) || this.state.object.length !== 13) || this.state.loading}
               onClick={() => { this.handleClick() }}> 
                 Rastrear
                 <SendIcon className="Icon"/>
@@ -119,7 +119,7 @@ class App extends Component {
               <Chip className="Margin" color="primary" label={"Rastreamento de Objeto - " + this.state.info.objeto[0].numero} />
             }
 
-            { this.state.info && !this.state.info.objeto[0].categoria.includes("ERRO") &&
+            { this.state.info && (!this.state.info.objeto[0].categoria || !this.state.info.objeto[0].categoria.includes("ERRO")) &&
                 <Table className="TableSize">
                   <TableHead>
                     <TableRow>
@@ -168,7 +168,7 @@ class App extends Component {
                 </Table>
             }
 
-            { this.state.info && this.state.info.objeto[0].categoria.includes("ERRO") &&
+            { this.state.info && this.state.info.objeto[0].categoria && this.state.info.objeto[0].categoria.includes("ERRO") &&
                 <div>Objeto não encontrado na base de dados dos Correios!</div>
             }
         </div>
