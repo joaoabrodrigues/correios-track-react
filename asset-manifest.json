@@ -1,7 +1,7 @@
 {
   "main.css": "/correios-track-react/static/css/main.a9411f25.chunk.css",
-  "main.js": "/correios-track-react/static/js/main.ad40389a.chunk.js",
-  "main.js.map": "/correios-track-react/static/js/main.ad40389a.chunk.js.map",
+  "main.js": "/correios-track-react/static/js/main.455b1fdb.chunk.js",
+  "main.js.map": "/correios-track-react/static/js/main.455b1fdb.chunk.js.map",
   "static/css/1.b4e4bde8.chunk.css": "/correios-track-react/static/css/1.b4e4bde8.chunk.css",
   "static/js/1.3efd79b5.chunk.js": "/correios-track-react/static/js/1.3efd79b5.chunk.js",
   "static/js/1.3efd79b5.chunk.js.map": "/correios-track-react/static/js/1.3efd79b5.chunk.js.map",
@@ -11,6 +11,6 @@
   "static/css/main.a9411f25.chunk.css.map": "/correios-track-react/static/css/main.a9411f25.chunk.css.map",
   "static/css/1.b4e4bde8.chunk.css.map": "/correios-track-react/static/css/1.b4e4bde8.chunk.css.map",
   "index.html": "/correios-track-react/index.html",
-  "precache-manifest.f71fc7ef773d6b788e29b17583ec3ca4.js": "/correios-track-react/precache-manifest.f71fc7ef773d6b788e29b17583ec3ca4.js",
+  "precache-manifest.78d0ef4cedd30ba46278907b7679d061.js": "/correios-track-react/precache-manifest.78d0ef4cedd30ba46278907b7679d061.js",
   "service-worker.js": "/correios-track-react/service-worker.js"
 }
