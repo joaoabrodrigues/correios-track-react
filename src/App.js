@@ -37,11 +37,23 @@ const theme = createMuiTheme({
 class App extends Component {
   constructor () {
     super()
+    let objectUrl = new URLSearchParams(window.location.search).get('object')
+
+    objectUrl = objectUrl && objectUrl.length === 13 && !/^\s*$/.test(objectUrl) ? objectUrl : null
+
     this.state =  {
       info: '',
-      object: '',
-      loading: false
+      object: objectUrl ? objectUrl : '',
+      loading: true,
+      isUrl: true
     }
+
+    if (objectUrl) {
+      this.handleClick()
+    } else {
+      this.state.loading = false
+    }
+
     this.handleClick = this.handleClick.bind(this)
   }
 
@@ -52,13 +64,13 @@ class App extends Component {
   };
 
   handleKeyPress = event => {
-    if (event.key === 'Enter' && !(!this.state.object || /^\s*$/.test(this.state.object) || this.state.object.length < 13 || this.state.object.length > 13) && !this.state.loading) {
+    if (event.key === 'Enter' && !(!this.state.object || /^\s*$/.test(this.state.object) || this.state.object.length !== 13 ) && !this.state.loading) {
       this.handleClick();
     }
   };
 
   handleClick() {
-    if (!this.state.loading) {
+    if (!this.state.loading || this.state.isUrl) {
       this.setState({info: '', loading: true})
 
       axios.get(`http://correiostrack.joaoabrodrigues.com:8080/api/v1/track/${this.state.object}`)
@@ -87,6 +99,7 @@ class App extends Component {
               helperText="Exemplo: AA123456789BR"
               onChange={this.handleChange('object')}
               onKeyPress={this.handleKeyPress}
+              value={this.state.object}
               inputProps={{
                 maxLength: 13,
               }}
@@ -95,7 +108,7 @@ class App extends Component {
               variant="contained"
               color="primary"
               className="Button"
-              disabled={((!this.state.object || /^\s*$/.test(this.state.object) || this.state.object.length < 13 || this.state.object.length > 13) || this.state.loading)}
+              disabled={(!this.state.object || /^\s*$/.test(this.state.object) || this.state.object.length !== 13) || this.state.loading}
               onClick={() => { this.handleClick() }}> 
                 Rastrear
                 <SendIcon className="Icon"/>
