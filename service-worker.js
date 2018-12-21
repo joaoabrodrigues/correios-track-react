@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/correios-track-react/precache-manifest.a25a13a50fa097642835def6e3ff33e6.js"
+  "/correios-track-react/precache-manifest.8b88467af89c6e8e3d2f63d61d4a175c.js"
 );
 
 workbox.clientsClaim();

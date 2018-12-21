@@ -1,19 +1,19 @@
 self.__precacheManifest = [
   {
-    "revision": "a1471d1d6431c893582a5f6a250db3f9",
-    "url": "/correios-track-react/static/media/roboto-latin-300.a1471d1d.woff"
+    "revision": "210a7c781f5a354a0e4985656ab456d9",
+    "url": "/correios-track-react/static/media/roboto-latin-300italic.210a7c78.woff"
   },
   {
-    "revision": "86682b76bf58ccc63c90",
-    "url": "/correios-track-react/static/css/main.3f3c9df9.chunk.css"
+    "revision": "b02daf95c99e781e7b52",
+    "url": "/correios-track-react/static/css/main.c65828cd.chunk.css"
   },
   {
-    "revision": "7b770d6c53423deb1a8e49d3c9175184",
-    "url": "/correios-track-react/static/media/roboto-latin-900italic.7b770d6c.woff2"
+    "revision": "bc833e725c137257c2c42a789845d82f",
+    "url": "/correios-track-react/static/media/roboto-latin-900italic.bc833e72.woff"
   },
   {
-    "revision": "f81e775dbf7dc9485cd3",
-    "url": "/correios-track-react/static/js/1.f81e775d.chunk.js"
+    "revision": "3efd79b58ef0c59be395",
+    "url": "/correios-track-react/static/js/1.3efd79b5.chunk.js"
   },
   {
     "revision": "ceda8dd5ca86e60682c9",
@@ -52,24 +52,32 @@ self.__precacheManifest = [
     "url": "/correios-track-react/static/media/roboto-latin-100.e9dbbe8a.woff"
   },
   {
-    "revision": "d69924b98acd849cdeba9fbff3f88ea6",
-    "url": "/correios-track-react/static/media/roboto-latin-300italic.d69924b9.woff2"
+    "revision": "a1471d1d6431c893582a5f6a250db3f9",
+    "url": "/correios-track-react/static/media/roboto-latin-300.a1471d1d.woff"
   },
   {
     "revision": "d704bb3d579b7d5e40880c75705c8a71",
     "url": "/correios-track-react/static/media/roboto-latin-100italic.d704bb3d.woff"
   },
   {
-    "revision": "86682b76bf58ccc63c90",
-    "url": "/correios-track-react/static/js/main.86682b76.chunk.js"
+    "revision": "b02daf95c99e781e7b52",
+    "url": "/correios-track-react/static/js/main.b02daf95.chunk.js"
   },
   {
-    "revision": "210a7c781f5a354a0e4985656ab456d9",
-    "url": "/correios-track-react/static/media/roboto-latin-300italic.210a7c78.woff"
+    "revision": "d69924b98acd849cdeba9fbff3f88ea6",
+    "url": "/correios-track-react/static/media/roboto-latin-300italic.d69924b9.woff2"
   },
   {
     "revision": "bafb105baeb22d965c70fe52ba6b49d9",
     "url": "/correios-track-react/static/media/roboto-latin-400.bafb105b.woff"
+  },
+  {
+    "revision": "9680d5a0c32d2fd084e07bbc4c8b2923",
+    "url": "/correios-track-react/static/media/roboto-latin-400italic.9680d5a0.woff"
+  },
+  {
+    "revision": "de8b7431b74642e830af4d4f4b513ec9",
+    "url": "/correios-track-react/static/media/roboto-latin-500.de8b7431.woff"
   },
   {
     "revision": "d8bcbe724fd6f4ba44d0ee6a2675890f",
@@ -80,20 +88,12 @@ self.__precacheManifest = [
     "url": "/correios-track-react/static/media/roboto-latin-500italic.510dec37.woff2"
   },
   {
-    "revision": "de8b7431b74642e830af4d4f4b513ec9",
-    "url": "/correios-track-react/static/media/roboto-latin-500.de8b7431.woff"
-  },
-  {
     "revision": "ffcc050b2d92d4b14a4fcb527ee0bcc8",
     "url": "/correios-track-react/static/media/roboto-latin-500italic.ffcc050b.woff"
   },
   {
-    "revision": "9680d5a0c32d2fd084e07bbc4c8b2923",
-    "url": "/correios-track-react/static/media/roboto-latin-400italic.9680d5a0.woff"
-  },
-  {
-    "revision": "cf6613d1adf490972c557a8e318e0868",
-    "url": "/correios-track-react/static/media/roboto-latin-700.cf6613d1.woff"
+    "revision": "846d1890aee87fde5d8ced8eba360c3a",
+    "url": "/correios-track-react/static/media/roboto-latin-700italic.846d1890.woff"
   },
   {
     "revision": "010c1aeee3c6d1cbb1d5761d80353823",
@@ -104,19 +104,19 @@ self.__precacheManifest = [
     "url": "/correios-track-react/static/media/roboto-latin-900.8c2ade50.woff"
   },
   {
-    "revision": "846d1890aee87fde5d8ced8eba360c3a",
-    "url": "/correios-track-react/static/media/roboto-latin-700italic.846d1890.woff"
+    "revision": "7b770d6c53423deb1a8e49d3c9175184",
+    "url": "/correios-track-react/static/media/roboto-latin-900italic.7b770d6c.woff2"
   },
   {
-    "revision": "bc833e725c137257c2c42a789845d82f",
-    "url": "/correios-track-react/static/media/roboto-latin-900italic.bc833e72.woff"
+    "revision": "cf6613d1adf490972c557a8e318e0868",
+    "url": "/correios-track-react/static/media/roboto-latin-700.cf6613d1.woff"
   },
   {
-    "revision": "f81e775dbf7dc9485cd3",
-    "url": "/correios-track-react/static/css/1.dd04a7a5.chunk.css"
+    "revision": "3efd79b58ef0c59be395",
+    "url": "/correios-track-react/static/css/1.b4e4bde8.chunk.css"
   },
   {
-    "revision": "65dc1bdbd68ca2aa9f896779e1eb8493",
+    "revision": "26c8bf34e81cb7a64d43ec2fa2179f43",
     "url": "/correios-track-react/index.html"
   }
 ];
