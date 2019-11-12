@@ -1,16 +1,25 @@
 {
-  "main.css": "/correios-track-react/static/css/main.a9411f25.chunk.css",
-  "main.js": "/correios-track-react/static/js/main.455b1fdb.chunk.js",
-  "main.js.map": "/correios-track-react/static/js/main.455b1fdb.chunk.js.map",
-  "static/css/1.b4e4bde8.chunk.css": "/correios-track-react/static/css/1.b4e4bde8.chunk.css",
-  "static/js/1.3efd79b5.chunk.js": "/correios-track-react/static/js/1.3efd79b5.chunk.js",
-  "static/js/1.3efd79b5.chunk.js.map": "/correios-track-react/static/js/1.3efd79b5.chunk.js.map",
-  "runtime~main.js": "/correios-track-react/static/js/runtime~main.ceda8dd5.js",
-  "runtime~main.js.map": "/correios-track-react/static/js/runtime~main.ceda8dd5.js.map",
-  "static/media/index.css": "/correios-track-react/static/media/roboto-latin-900italic.bc833e72.woff",
-  "static/css/main.a9411f25.chunk.css.map": "/correios-track-react/static/css/main.a9411f25.chunk.css.map",
-  "static/css/1.b4e4bde8.chunk.css.map": "/correios-track-react/static/css/1.b4e4bde8.chunk.css.map",
-  "index.html": "/correios-track-react/index.html",
-  "precache-manifest.78d0ef4cedd30ba46278907b7679d061.js": "/correios-track-react/precache-manifest.78d0ef4cedd30ba46278907b7679d061.js",
-  "service-worker.js": "/correios-track-react/service-worker.js"
+  "files": {
+    "main.css": "/correios-track-react/static/css/main.2bc55301.chunk.css",
+    "main.js": "/correios-track-react/static/js/main.2de1d7e0.chunk.js",
+    "main.js.map": "/correios-track-react/static/js/main.2de1d7e0.chunk.js.map",
+    "runtime-main.js": "/correios-track-react/static/js/runtime-main.245ff12c.js",
+    "runtime-main.js.map": "/correios-track-react/static/js/runtime-main.245ff12c.js.map",
+    "static/css/2.1f04b65b.chunk.css": "/correios-track-react/static/css/2.1f04b65b.chunk.css",
+    "static/js/2.bbd3869a.chunk.js": "/correios-track-react/static/js/2.bbd3869a.chunk.js",
+    "static/js/2.bbd3869a.chunk.js.map": "/correios-track-react/static/js/2.bbd3869a.chunk.js.map",
+    "index.html": "/correios-track-react/index.html",
+    "precache-manifest.2f74dd55581d0a42f0b5b2bb56c98975.js": "/correios-track-react/precache-manifest.2f74dd55581d0a42f0b5b2bb56c98975.js",
+    "service-worker.js": "/correios-track-react/service-worker.js",
+    "static/css/2.1f04b65b.chunk.css.map": "/correios-track-react/static/css/2.1f04b65b.chunk.css.map",
+    "static/css/main.2bc55301.chunk.css.map": "/correios-track-react/static/css/main.2bc55301.chunk.css.map",
+    "static/media/index.css": "/correios-track-react/static/media/roboto-latin-900italic.ebf6d164.woff2"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.245ff12c.js",
+    "static/css/2.1f04b65b.chunk.css",
+    "static/js/2.bbd3869a.chunk.js",
+    "static/css/main.2bc55301.chunk.css",
+    "static/js/main.2de1d7e0.chunk.js"
+  ]
 }
