@@ -2,7 +2,7 @@
 
 npm run build
 
-gh-pages -d build
+gh-pages -d build -b gh-pages
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
