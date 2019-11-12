@@ -143,19 +143,77 @@ class App extends Component {
                               <Table>
                                 <TableBody>
                                   <TableRow key={evento.tipo+evento.destino}>
-                                  { !evento.destino &&
+                                  { !evento.destino && !evento.unidade.cidade && !evento.unidade.uf &&
                                     <TableCell className="CellPadding">
-                                      <strong>Local:</strong> { evento.unidade.local + ' - ' + evento.unidade.cidade + '/' + evento.unidade.uf + ' - ' + evento.unidade.tipounidade }
+                                      <strong>Local:</strong>  {
+                                                                evento.unidade.local  
+                                                                + ' - ' 
+                                                                + evento.unidade.tipounidade
+                                                              }
                                     </TableCell>
                                   }
-                                  { evento.destino &&
+
+                                  { !evento.destino && evento.unidade.cidade && evento.unidade.uf &&
+                                    <TableCell className="CellPadding">
+                                      <strong>Local:</strong>  {
+                                                                evento.unidade.local 
+                                                                + ' - ' 
+                                                                + evento.unidade.cidade
+                                                                + '/' 
+                                                                + evento.unidade.uf 
+                                                                + ' - ' 
+                                                                + evento.unidade.tipounidade
+                                                              }
+                                    </TableCell>
+                                  }
+
+                                  { evento.destino && !evento.unidade.cidade && !evento.unidade.uf &&
                                     <TableCell className="Origem CellPadding">
-                                      <strong>Origem:</strong> { evento.unidade.local + ' - ' + evento.unidade.cidade + '/' + evento.unidade.uf + ' - ' + evento.unidade.tipounidade}
+                                      <strong>Origem:</strong> {
+                                                                  evento.unidade.local 
+                                                                  + ' - ' 
+                                                                  + evento.unidade.tipounidade
+                                                                }
                                     </TableCell>
                                   }
-                                  { evento.destino &&
+                                  { evento.destino && evento.unidade.cidade && evento.unidade.uf &&
+                                    <TableCell className="Origem CellPadding">
+                                      <strong>Origem:</strong> {
+                                                                  evento.unidade.local 
+                                                                  + ' - ' 
+                                                                  + evento.unidade.cidade 
+                                                                  + '/' 
+                                                                  + evento.unidade.uf 
+                                                                  + ' - ' 
+                                                                  + evento.unidade.tipounidade
+                                                                }
+                                    </TableCell>
+                                  }
+                                  { evento.destino && !evento.destino[0].cidade && !evento.destino[0].uf &&
                                     <TableCell className="CellPadding">
-                                      <strong>Destino:</strong> { evento.destino[0].local + ' - ' + evento.destino[0].cidade + '/' + evento.destino[0].uf }
+                                      <strong>Destino:</strong> {
+                                                                  evento.destino[0].local 
+                                                                }
+                                    </TableCell>
+                                  }
+                                  { evento.destino && evento.destino[0].cidade && evento.destino[0].uf &&
+                                    <TableCell className="CellPadding">
+                                      <strong>Destino:</strong> {
+                                                                  evento.destino[0].local 
+                                                                  + ' - ' 
+                                                                  + evento.destino[0].cidade 
+                                                                  + '/' 
+                                                                  + evento.destino[0].uf
+                                                                }
+                                    </TableCell>
+                                  }
+                                  { evento.destino && !evento.destino[0].cidade  && evento.destino[0].uf &&
+                                    <TableCell className="CellPadding">
+                                      <strong>Destino:</strong> {
+                                                                  evento.destino[0].local 
+                                                                  + ' - ' 
+                                                                  + evento.destino[0].uf
+                                                                }
                                     </TableCell>
                                   }
                                   </TableRow>
