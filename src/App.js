@@ -73,7 +73,7 @@ class App extends Component {
     if (!this.state.loading || this.state.isUrl) {
       this.setState({info: '', loading: true})
 
-      axios.get(`https://correiostrackssl.joaorodrigues.dev/v1/tracking/${this.state.object}`)
+      axios.get(`https://api.joaorodrigues.dev/correios-tracking-service/v1/track/${this.state.object}`)
            .then(response => this.setState({info: response.data, loading: false}))
     }
   }
