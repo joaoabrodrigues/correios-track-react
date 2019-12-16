@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/correios-track-react/precache-manifest.2f74dd55581d0a42f0b5b2bb56c98975.js"
+  "/correios-track-react/precache-manifest.57aacad8e951781d11159e138f98e43a.js"
 );
 
 self.addEventListener('message', (event) => {
